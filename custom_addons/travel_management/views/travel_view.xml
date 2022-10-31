@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="travel_list_view" model="ir.ui.view">
+        <field name="name">travel.list.view</field>
+        <field name="model">travel.profile</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="travel_form_view" model="ir.ui.view">
+        <field name="name">travel.form.view</field>
+        <field name="model">travel.profile</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                    </group>
+                </group>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="action_travel_profile" model="ir.actions.act_window">
+        <field name="name">Travel Profile</field>
+        <field name="res_model">travel.profile</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="travel_root_menu" name="Travel"/>
+    <menuitem id="travel_sub_menu" parent="travel_root_menu"
+              name="Travel Profile"/>
+    <menuitem id="travel_profile_menu" name="Travel"
+              action="action_travel_profile"
+              parent="travel_sub_menu"/>
+
+</odoo>
+
+
