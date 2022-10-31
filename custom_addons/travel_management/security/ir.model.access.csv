@@ -1,2 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+<<<<<<< HEAD
 access_travel_profile,access.travel.profile,model_travel_profile,,1,1,1,1
+=======
+access_travel,access_travel_management,model_travel-travel,base.group_user,1,1,1,1
+>>>>>>> 4c74d74b71788ffcc3e3854ac43ee6ac8b05a57c

@@ -638,7 +638,11 @@ class GeventServer(CommonServer):
         try:
             from gevent.pywsgi import WSGIServer, WSGIHandler
         except ImportError:
+<<<<<<< HEAD
             from gevent.pywsgi import WSGIServer, WSGIHandler
+=======
+            from gevent.wsgi import WSGIServer, WSGIHandler
+>>>>>>> 4c74d74b71788ffcc3e3854ac43ee6ac8b05a57c
 
         class ProxyHandler(WSGIHandler):
             """ When logging requests, try to get the client address from
